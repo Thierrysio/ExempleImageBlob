@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExempleImageBlob.Vues.ImageVue"
+             Title="ImageVue">
+    <VerticalStackLayout>
+        <Image x:Name="image" />
+        <Button x:Name="toto" Clicked="toto_Clicked"/>
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,49 @@
+﻿Processus de developpement
+
+Dossier Vue
+
+Xaml
+
+Creation d'une vue. pour le test creation d'une image et d'un bouton
+
+Xaml.cs
+
+methode ->  private async void toto_Clicked(object sender, EventArgs e) 
+Le commentaire est en ligne
+
+Services
+
+Conversion (2 methodes)
+
+        public static ImageSource ConvertFromBase64(string param)
+
+        elle permet de convertir une string en base64 en flux d'image
+
+        public static string ConvertToBase64(this Stream stream)
+
+        elle permet de convertir un flux de données en string base64
+
+
+
+Gestion de la compression d'image
+
+Chaque plateforme a sa gestion propre de certaines fonctionnalités pour cela il est necessaire de surcharger une classe
+
+Etape 1 
+
+Creer une classe dans le projet partagé (ici MyImageCompressor_Android ) vous remarquez que la classe et la methode sont PARTIAL.
+De plus la methode fonctionne comme dans une interface (elle ne presente que le contrat).
+
+Etape 2
+
+Dans plateforms -> Android
+
+public partial class MyImageCompressor_Android 
+
+        public partial string ImageCompressor(byte[] bitmapBytes) mais cette fois la methode est implementée.
+
+
+
+
+
+
