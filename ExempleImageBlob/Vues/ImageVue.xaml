@@ -4,7 +4,18 @@
              x:Class="ExempleImageBlob.Vues.ImageVue"
              Title="ImageVue">
     <VerticalStackLayout>
-        <Image x:Name="image" />
+        <Frame
+                HeightRequest="380" WidthRequest="280"
+                BackgroundColor="White"  Padding="0"
+                HasShadow="True" Margin="10" CornerRadius="10"
+                HorizontalOptions="CenterAndExpand">
+            <StackLayout>
+                <Image x:Name="image"
+                           VerticalOptions="FillAndExpand"
+                           Aspect="AspectFill"/>
+            </StackLayout>
+
+        </Frame>
         <Button x:Name="toto" Clicked="toto_Clicked"/>
     </VerticalStackLayout>
 </ContentPage>
